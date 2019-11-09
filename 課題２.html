@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Todoリスト</title>
+    <link rel="stylesheet" type="text/css" href="本課題２.css">
+</head>
+<body>
+    <h1>Todoリスト</h1>
+​
+    <div>
+             <input type="radio" name="koudou" checked>　すべて
+             <input type="radio" name="koudou" > 作業中
+             <input type="radio" name="koudou" > 完了 
+    </div><br>
+    <div>
+    <table>
+    <thead>
+        <tr>
+        <th id="c1">ID</th>
+        <th id="c2">コメント</th>
+        <th id="c3">状態</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>    
+        <td id="id"></td>　
+        </tr>
+    </tbody>   
+    </table>
+    </div>
+    <div>
+        <p><font size="5">新規タスクの追加</font></p>
+        <p id="output"></p>　
+    </div>
+    <form name="form1">
+    <input type="text" name="text1" id="form1"  >
+    </form>
+    <div> 
+    <button id="abtn">追加</button>
+    </div>
+    
+    <script>
+            //ここにjavascriptを記述する
+            const abtn = document.getElementById('abtn');
+            const table = document.querySelector("table");
+            
+            
+            //console.log(abtn);
+            
+        
+            abtn.addEventListener('click',function(){
+            
+            const c1 = document.getElementById('c1');
+            const c2 = document.getElementById('c2');
+            const c3 = document.getElementById('c3');
+            const id = document.getElementById('id');
+            const form1 = document.form1.text1.value;
+                //クリック時に実行する処理を記述
+               
+    // 行を行末に追加
+    var row = table.insertRow(-1);
+    // セルの挿入
+    var cell1 = row.insertCell(-1);
+    var cell2 = row.insertCell(-1);
+    var cell3 = row.insertCell(-1);
+    var cell4 = row.insertCell(-1);
+    // ボタン用 HTML
+    var button1 = '<input type="button" value="作業中" />';
+    var button2 = '<input type="button" value="削除" />';
+ 
+    // 行数取得
+    var row_len = table.rows.length;
+ 
+    // セルの内容入力
+    cell1.innerHTML = row_len;
+    cell2.innerHTML = textContent = form1;   
+    cell3.innerHTML = button1;
+    cell4.innerHTML = button2;
+                
+        
+         
+            })
+                
+        
+                </script>
+</body>
+</html>
