@@ -1,7 +1,7 @@
-#form1 {position:relative;
+#form {position:relative;
     float:left;}
 
-#abtn {position:relative;
+#add-btn {position:relative;
     float:left;
     padding: 6px 10px;
 }
